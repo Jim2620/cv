@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-export default class Skills extends Component {
+class Skills extends Component {
     render() {
         return (
             <div>
-                
+                SKILLS PAGE
             </div>
         );
     }
 }
+
+export default Skills
