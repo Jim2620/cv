@@ -12,29 +12,48 @@ import Portfolio from "./components/pages/portfolio/Portfolio";
 import Profile from "./components/pages/profile/Profile";
 import Skills from "./components/pages/skills/Skills.js";
 
-function App() {
-  return (
-    <div>
-      <header>
-        <h1>Welcome to my App</h1>
-      </header>
+import React, { Component } from "react";
 
-      <main>
-        <Switch>
-          <Route path="/">
-            <Home />
-            <About />
-            <Contact />
-            <Education />
-            <Experience />
-            <Portfolio />
-            <Profile />
-            <Skills />
-          </Route>
-        </Switch>
-      </main>
-    </div>
-  );
+class App extends Component {
+  render() {
+    // Edit this area for basic information about yourself
+    var education = {
+      name: "Jim",
+      school1: "Baruch College",
+      start1: "August 2006",
+      finish1: "December 2010",
+      school2: "Manhattan Center for Science and Mathematics",
+      start2: "September 2002",
+      finish2: "June 2006",
+      major: "Industrial-Organizational Psychology",
+      certification1: "DevelopIntelligence/American Express Coding Bootcamp",
+      start3: "April 2021",
+      finish3: "July 2021",
+    };
+
+    return (
+      <div>
+        <header>
+          <h1>Welcome to my App</h1>
+        </header>
+
+        <main>
+          <Switch>
+            <Route path="/">
+              <Home />
+              <About />
+              <Contact />
+              <Education education={education} />
+              <Experience />
+              <Portfolio />
+              <Profile />
+              <Skills />
+            </Route>
+          </Switch>
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
